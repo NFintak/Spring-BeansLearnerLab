@@ -1,4 +1,4 @@
-package com.example.demo.people;
+package com.example.demo.classes;
 
 public class Person {
 
