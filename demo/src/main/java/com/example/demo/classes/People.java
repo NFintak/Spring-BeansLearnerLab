@@ -15,8 +15,30 @@ public abstract class People<PersonType extends Person> {
         this.personList = new ArrayList<PersonType>(number);
     }
 
-    public void addPersonType(PersonType person) {
+    public void add(PersonType person) {
         this.personList.add(person);
+    }
+
+    public void remove(PersonType person) {
+        this.personList.remove(person);
+    }
+
+    public void clear() {
+        this.personList.clear();
+    }
+
+    public void addAll(Iterable<PersonType> addedList) {
+        for (PersonType personType : addedList) {
+            add(personType);
+        }
+    }
+
+    public int size() {
+        return personList.size();
+    }
+
+    public PersonType findById(Long id) {
+        return null;
     }
 
 }
