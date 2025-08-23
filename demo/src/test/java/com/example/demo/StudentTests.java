@@ -26,6 +26,14 @@ public class StudentTests {
         assertInstanceOf(Person.class, test);
     }
 
-
+    @Test
+    public void testLearn() {
+        Student test = new Student(0.5);
+        assertEquals(0.5, test.getTotalStudyTime());
+        double addedHours = 2.5;
+        double expected = 3.0;
+        test.learn(addedHours);
+        assertEquals(expected, test.getTotalStudyTime());
+    }
 
 }
