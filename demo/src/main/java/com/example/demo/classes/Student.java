@@ -6,6 +6,10 @@ public class Student extends Person implements Learner {
 
     private double totalStudyTime;
 
+    public Student() {
+        this.totalStudyTime = 0.0;
+    }
+
     public Student(double totalStudyTime) {
         this.totalStudyTime = totalStudyTime;
     }
