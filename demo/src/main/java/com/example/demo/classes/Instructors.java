@@ -1,4 +1,10 @@
 package com.example.demo.classes;
 
-public class Instructors {
+import java.util.List;
+
+public class Instructors extends People<Instructor> {
+
+    public Instructors(List<Instructor> instructorList) {
+        super(instructorList);
+    }
 }

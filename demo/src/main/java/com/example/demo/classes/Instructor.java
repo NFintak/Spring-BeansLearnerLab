@@ -8,7 +8,11 @@ import java.util.ArrayList;
 public class Instructor extends Person implements Teacher {
 
     public Instructor() {
+        super.name = "";
+    }
 
+    public Instructor(String name) {
+        super.name = name;
     }
 
     public void teach(Learner learner, double numberOfHours) {
