@@ -69,4 +69,22 @@ public class InstructorsTests {
         assertEquals(4, test.size());
     }
 
+    @Test
+    public void testFindById() {
+        Instructors test = new Instructors(instructorList);
+        Instructor instructor1 = new Instructor(), instructor2 = new Instructor();
+        test.add(instructor1); test.add(instructor2);
+        //assertEquals(instructor1, test.findById(0L));
+        assertNull(test.findById(4L));
+    }
+
+    @Test
+    public void testFindAll() {
+        Instructors test = new Instructors(instructorList);
+        Instructor instructor1 = new Instructor(), instructor2 = new Instructor();
+        test.add(instructor1); test.add(instructor2);
+        ArrayList<Instructor> expected = new ArrayList<>(instructorList);
+        assertEquals(expected, test.findAll());
+    }
+
 }

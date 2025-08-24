@@ -82,8 +82,7 @@ public class StudentsTests {
         Students test = new Students(studentList);
         Student student1 = new Student(), student2 = new Student(), student3 = new Student();
         test.add(student1); test.add(student2); test.add(student3);
-        ArrayList<Student> expected = new ArrayList<>();
-        expected.addAll(studentList);
+        ArrayList<Student> expected = new ArrayList<>(studentList);
         assertEquals(expected, test.findAll());
     }
 
