@@ -38,7 +38,16 @@ public abstract class People<PersonType extends Person> {
     }
 
     public PersonType findById(Long id) {
+        for (PersonType personType : this.personList) {
+            if (personType.getId().equals(id)) {
+                return personType;
+            }
+        }
         return null;
+    }
+
+    public List<PersonType> findAll() {
+        return personList;
     }
 
 }
