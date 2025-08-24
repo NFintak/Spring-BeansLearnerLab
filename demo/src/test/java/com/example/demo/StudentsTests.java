@@ -5,8 +5,6 @@ import com.example.demo.classes.Students;
 import com.example.demo.classes.People;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.BeforeAll;
-import java.util.List;
 import java.util.ArrayList;
 
 public class StudentsTests {
