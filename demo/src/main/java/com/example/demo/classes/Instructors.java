@@ -7,4 +7,8 @@ public class Instructors extends People<Instructor> {
     public Instructors(List<Instructor> instructorList) {
         super(instructorList);
     }
+
+    public Instructors(int numOfInstructors) {
+        super(numOfInstructors);
+    }
 }

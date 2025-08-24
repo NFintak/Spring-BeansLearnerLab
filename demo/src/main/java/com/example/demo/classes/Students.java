@@ -8,4 +8,8 @@ public class Students extends People<Student> {
         super(studentList);
     }
 
+    public Students(int numOfStudents) {
+        super(numOfStudents);
+    }
+
 }
