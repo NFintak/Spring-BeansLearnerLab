@@ -15,8 +15,14 @@ public class StudentTests {
     }
 
     @Test
-    public void testNonNullConstructor() {
+    public void test1NonNullConstructor() {
         Student test = new Student(2.2);
+        assertNotNull(test);
+    }
+
+    @Test
+    public void test2NonNullConstructor() {
+        Student test = new Student("Jane Doe", 3.5);
         assertNotNull(test);
     }
 
@@ -24,6 +30,22 @@ public class StudentTests {
     public void testInstanceOfPerson() {
         Student test = new Student();
         assertInstanceOf(Person.class, test);
+    }
+
+    @Test
+    public void testGetId() {
+        Student test = new Student();
+        Long expected = 0L;
+        assertEquals(expected, test.getId());
+    }
+
+    @Test
+    public void testGetSetName() {
+        Student test = new Student();
+        assertEquals("", test.getName());
+        String expected = "Jane Doe";
+        test.setName(expected);
+        assertEquals("Jane Doe", test.getName());
     }
 
     @Test
